@@ -1,11 +1,19 @@
 body{
+  background-color: #FECEE9;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .intro-card{
+  background-color: #C9CBE9;
   margin: auto;
   width: 40%;
   text-align: center;
   border: 5px solid #000;
   padding: 10px;
+  color: #4A4A55;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  border: 2px solid #6E6F80;
 }
