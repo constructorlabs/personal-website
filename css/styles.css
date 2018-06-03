@@ -55,7 +55,8 @@ body {
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
-  margin-top: 80px;
+  margin-top: 40px;
+  padding-bottom: 10%;
 }
 
 @media (max-width: 768px) {
@@ -105,4 +106,40 @@ body {
 .project figcaption.project-caption {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+/* About */
+.about-wrapper {
+  padding-left: 20%;
+  padding-top: 10%;
+  height: 100vh;
+  background-color: var(--about-background-color);
+}
+
+.about-heading {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.about-details {
+  color: #cbcbe5;
+  width: 60%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.75rem;
+}
+
+.social {
+  padding-left: 40px;
+}
+@media (max-width: 960px) {
+  .about-wrapper {
+    padding-left: 0;
+  }
+
+  .about-details {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0;
+  }
 }
