@@ -1,18 +1,19 @@
 body{
-  background: url("assets/images/ferdinand-stohr-229736-unsplash.jpg") no-repeat center center fixed;
+  background: url("assets/images/aditya-vyas-542857-unsplash.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .intro-card{
-  background-color: #C9CBE9;
   margin: auto;
   width: 40%;
   text-align: center;
-  border: 5px solid #000;
   padding: 10px;
-  color: #4A4A55;
-  box-shadow: 0px 4px 4px;
+  color: #FFF;
+}
+
+h1{
+  font-weight: normal;
 }
 
 .profile-pic{
