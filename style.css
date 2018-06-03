@@ -14,3 +14,11 @@ img {
   width: 30%;
   padding-bottom: 20px;
 }
+.fab{
+  color: black;
+}
+.footer {
+  height: 50px;
+  clear: both;
+  float: right;
+}
