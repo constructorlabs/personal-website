@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
 .border{
   border-color: orange;
   border-width: 13px;
@@ -11,6 +23,13 @@
 .smaller-image {
   width: 150px;
 }
+
+#biobackground{
+  background-color: grey;
+}
+#contactbackground{
+  background-color: blue;
+}
 </style>
 <head>
   <title>Ethan's homepage</title>
@@ -20,16 +39,18 @@
   <div >
       <img  class = "border smaller-image" src ="https://lh3.googleusercontent.com/-ElOBNqFrvms/VAtaXHVGXEI/AAAAAAAAAE0/FH7dxpYX7T8myEBEmf2HSYA6JjxAbKGsQCEwYBhgL/w278-h280-p/c24dbf37-c1f9-4a18-8daf-bcb9380ace51" alt="photo of myself">
   </div>
-  <div>
+  <div id="biobackground">
       <h1>Hi my name is Ethan, thank you for visitng this page </h1>
       <h2> more about me:</h2>
-      <p> I am a new beginner in web design and working on becoming a software engineer in the near future.
+      <h3> I am a new beginner in web design and working on becoming a software engineer in the near future.
         I am always happy to learn new skills to make things work better. London based, immigrant from Hong Kong,
-        worked in various roles in the NHS for the last 10 years. Cylist, cycle everywhere in London.</p>
+        worked in various roles in the NHS for the last 10 years. Cyclist, cycle everywhere in London.</h3>
       </div>
-
-      <p>see what I read/tweet about:</p>
-      <p>see what I have studied and my work in the past:</p>
+<div  >
+  <img class = "smaller-image" src= "https://images.unsplash.com/photo-1526007294207-6a0c9d171fdf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b82bbdf07ca4ab7a9f61da2b591a8437&auto=format&fit=crop&w=2849&q=80" alt="background photo">
+      <p>see what I read/tweet about:@ethanng329 <a href="https://twitter.com/Ethanng329" class="fa fa-twitter"></a></p>
+      <p>see what I have studied and my work in the past: <a href="https://www.linkedin.com/in/ethan-ng-654b94164/" class="fa fa-linkedin"</a></p>
+</div>
 
 </body>
 </html>
