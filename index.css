@@ -32,6 +32,17 @@ body{
   margin-right: auto;
 }
 
+.icon{
+  opacity: 0.6;
+  transition: transform .8s ease-in-out;
+}
+
+.icon:hover{
+  opacity: 1;
+  transform: rotate(360deg);
+  transition: opacity 1s;
+}
+
 .footer{
   position: fixed;
   left: 0;
