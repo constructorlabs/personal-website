@@ -23,20 +23,16 @@ body{
 .item3 {
   display: flex;
   flex-wrap: nowrap;
-  background-color: lightblue;
+  background-color: #4d4d4d;
   width: 100%;
-}
-.item4 {
-
-  background-color: red;
 }
 .item5 {
 
-  background-color: lightgreen;
+  background-color: #595959;
 }
 .item6 {
 
-  background-color: pink;
+  background-color: #a6a6a6;
 }
 
 /************* NAVMENU */
@@ -48,8 +44,10 @@ body{
 }
 .nav > li {
     flex: 1;
+    }
+li > a {
+  color:black;
 }
-
 /************* MAINSECTION */
 .mainSection{
   color : white;
@@ -87,8 +85,17 @@ body{
 }
 
 .social {
+  display: flex;
+  height: 3em;
+  margin:0 auto;
+  padding-top: 2em;
 
 }
+.social > li {
+    flex: 1;
+    list-style-type: none;
+}
+
 
 
   /**************** footer */
