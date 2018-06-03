@@ -1,0 +1,36 @@
+:root {
+  --main-text-color: #000;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* Project wrapper */
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Main nav */
+.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+}
+.main-nav li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.main-nav li:first-of-type {
+  margin-right: 30px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+.main-nav li a:hover {
+  opacity: 0.5;
+}
