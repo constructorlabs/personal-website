@@ -1,0 +1,85 @@
+/* Global level */
+html {
+  height: 100%;
+}
+body {
+  background: #D8D5Ca;
+  background: linear-gradient(to bottom right, #F2F5EA, #FFF2F2)
+}
+/* Previous bg colors - F2F5EA FFF2F2 */
+/* First section */
+#content {
+  text-align: center;
+  padding-top: 15%;
+  width: 100%;
+  padding-bottom: 15%;
+  color: #0A0A33;
+}
+#profile-pic {
+  border-radius: 50%;
+}
+.social-links {
+  display: inline-block;
+  font-family: sans-serif;
+  color: #0A0A33;
+}
+#name-title {
+  font-family: 'Kalam', cursive;
+  font-size: 3.5em;
+  /* text-shadow: 0px 1px 2px #f8f8f8; */
+}
+#name-subtitle {
+  font-family: 'Lato', sans-serif;
+}
+hr {
+  width: 275px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2); /* border shadow */
+}
+/* Second section */
+#second-section {
+  width: 100%;
+  background-color: #FF7264;
+}
+#welcome-message {
+  text-align: center;
+  color: white;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* My Skills Section */
+#skills-section{
+  padding-top: 7.5%;
+  padding-bottom: 7.5%;
+  background-color: #63FFD4;
+  width: 100%;
+}
+#my-skills-title {
+  text-align: center;
+  padding-bottom: 3%;
+}
+.progress-bar {
+  background-color: #0A0A33;
+}
+/* Quotes Section */
+#quotes-section {
+  padding-top: 7.5%;
+  padding-bottom: 7.5%;
+  background-color: #FDDE97;
+  width: 100%;
+}
+#coming-soon-notice {
+  text-align: center;
+}
+/* Footer section */
+#footer-section {
+  background-color: #0A0A33;
+}
+#goodbye-message {
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
