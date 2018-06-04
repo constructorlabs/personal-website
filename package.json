@@ -1,0 +1,30 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A really great way to stand out during the job hunting process is to have a personal website where hiring managers can learn a bit more about your skills and interests.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "serve": "npm run serve /dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesmcallister/personal-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesmcallister/personal-website/issues"
+  },
+  "homepage": "https://github.com/jamesmcallister/personal-website#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "^1.1.4",
+    "react-swipeable-views": "^0.12.13",
+    "react-swipeable-views-utils": "^0.12.13",
+    "styled-components": "^3.3.2"
+  }
+}
