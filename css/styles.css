@@ -1,0 +1,145 @@
+/* font-family: 'Source Sans Pro', sans-serif; */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+:root {
+  --main-text-color: #000;
+  --about-background-color: #40404c;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* Project wrapper */
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1600px;
+}
+
+/* Main nav */
+.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+}
+.main-nav li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.main-nav li:first-of-type {
+  margin-right: 30px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+.main-nav li a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 20px 0;
+  }
+}
+
+/* Projects */
+.projects-wrapper {
+  height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  margin-top: 40px;
+  padding-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  .projects-wrapper {
+    height: auto;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-wrapper {
+    grid-template-columns: 100%;
+  }
+}
+
+.project {
+  background-color: #fff;
+  color: #000;
+  text-align: right;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .project {
+    padding: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.project a.project-link {
+  text-decoration: none;
+  color: var(--main-text-color);
+  transition: opacity 1s;
+  opacity: 1;
+}
+.project a.project-link:hover {
+  opacity: 0.5;
+}
+.project img.project-img {
+  max-width: 100%;
+  width: 100%;
+}
+.project figure.project-details {
+  margin: 0;
+}
+.project figcaption.project-caption {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* About */
+.about-wrapper {
+  padding-left: 20%;
+  padding-top: 10%;
+  height: 100vh;
+  background-color: var(--about-background-color);
+}
+
+.about-heading {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.about-details {
+  color: #cbcbe5;
+  width: 60%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.75rem;
+}
+
+.social {
+  padding-left: 40px;
+}
+@media (max-width: 960px) {
+  .about-wrapper {
+    padding-left: 0;
+  }
+
+  .about-details {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+}
