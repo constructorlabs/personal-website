@@ -18,16 +18,38 @@ body {
   font-size: 25px;
 }
 
-.footer__text {
+.footer {
+  display: inline-block;
+}
+
+.leons_side {
+  float: left;
+}
+.footer__text1 {
   font-size: 20px;
-  text-align: right;
-  /* vertical-align: bottom; */
-  margin-right: 20px;
-  /* padding-bottom: 20px; */
+  text-align: left;
+  margin-left: 20px;
   position: relative;
 }
 
-.footer__icon {
+.footer__icon1 {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.sheilas_side {
+  float: right;
+}
+.footer__text2 {
+  font-size: 20px;
+  text-align: right;
+  margin-right: 20px;
+  position: relative;
+}
+
+.footer__icon2 {
   width: 100px;
   height: auto;
   text-align: right;
@@ -55,6 +77,6 @@ body {
     transform: translateY(-10px);
   }
 }
-.footer__icon:hover {
+.footer__icon2:hover {
   animation: bounce 1s;
 }
