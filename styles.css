@@ -13,6 +13,8 @@
   --sans-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --logo-font: 'Rock Salt', cursive;
+
+  --stickyHeaderHeight: 68px;
 }
 
 /*
@@ -29,6 +31,10 @@ Styles
 /*****************/
 /* global styles */
 
+html {
+  padding-top: 0;
+}
+
 body {
   color: var(--text-color);
 }
@@ -36,6 +42,10 @@ body {
 h2,
 h3 {
   font-family: var(--sans-font);
+}
+
+p {
+  line-height: 1.45;
 }
 
 ul {
@@ -76,27 +86,39 @@ a {
   text-shadow: 0 -1px 0 var(--shadow-color);
 }
 
+.sticky {
+  position: fixed;
+  top: var(--stickyHeaderHeight);
+  width: 100%;
+  z-index: 20;
+}
+
 /*****************/
 /* header styles */
 
 header {
   background: var(--bg-color-header);
-  padding: 2rem 0;
   text-align: center;
 }
 
-.title {
+#title {
+  background: var(--bg-color-header);
   color: rgba(255, 255, 255, 1);
   font-family: var(--logo-font);
-  /* font-weight: 100; */
-  margin: 0 0 1rem 0;
+  margin: 0;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .strapline {
   color: white;
   font-size: 1rem;
   font-weight: 100;
-  margin: 0 0 1.5rem 0;
+  margin: 4rem 0 1.5rem 0;
+  padding: 0.5rem 0 0 0;
 }
 
 .strapline .strike {
@@ -109,16 +131,30 @@ header {
   font-size: 1.5rem;
 }
 
+#contact {
+  background: var(--bg-color-header);
+  padding-bottom: 1rem;
+}
+
+.button--contact {
+  /* display: inline-block; */
+  position: relative;
+  margin: 0 auto;
+}
+
 /*********************/
 /* navigation styles */
 
 .section-nav {
   background: var(--bg-color-section-nav);
+  display: none;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .section-nav ul li {
@@ -141,9 +177,12 @@ header {
 /* section styles */
 
 section {
+  box-shadow: 0 0 1rem var(--shadow-color);
+}
+
+.section-wrapper {
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 0 1rem var(--shadow-color);
 }
 
 section.biog.section--biog {
@@ -156,20 +195,7 @@ section.biog.section--biog {
   font-style: italic;
 }
 
-.biog p::first-letter {
-  color: white;
-  font-family: var(--sans-font);
-  font-style: normal;
-  font-weight: 900;
-  background: black;
-  font-size: 2rem;
-  line-height: 1.8rem;
-  margin-right: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  float: left;
-}
-
-#content section div h3 {
+h3 {
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
   margin-top: 0;
@@ -201,7 +227,7 @@ section.biog.section--biog {
   transform: rotate(-90deg);
 }
 
-.section--skill div {
+.section--skill .section-wrapper div {
   flex: 1;
   margin: 0 0.5rem;
   padding-bottom: 1rem;
@@ -220,6 +246,14 @@ section.biog.section--biog {
   background: rgba(5, 46, 5, 0.5);
   margin-right: 0.5rem;
   padding: 0.25rem 0.4rem;
+}
+
+.section--about {
+  padding: 0 0.5rem;
+}
+
+.section--about p {
+  margin-top: 0;
 }
 
 /*****************/
@@ -242,48 +276,72 @@ footer {
     flex-direction: column;
     min-height: 100vh;
   }
-  .title {
-    font-size: 4rem;
+  #title {
+    /* font-size: 4rem; */
   }
   .strapline {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #content {
     flex-grow: 1;
   }
 
-  #content section {
+  section {
     flex: 3;
   }
 
-  #content section.biog.section--biog {
+  section.biog.section--biog {
     flex: 1;
   }
-  #content section.biog.section--biog {
-    padding: 1rem 2rem;
+  section.biog.section--biog {
+    padding: 1rem 0;
   }
+
   .biog p {
     font-size: 1.5rem;
     margin-bottom: 0;
+    line-height: 1.2¦;
   }
   .biog p::first-letter {
+    color: white;
+    font-family: var(--sans-font);
+    font-style: normal;
+    font-weight: 900;
+    background: black;
     font-size: 3rem;
     line-height: 2.75rem;
+    margin-right: 0.5rem;
     padding: 0.25rem 0.75rem;
+    float: left;
+  }
+  .biog p::first-letter {
   }
   .section-header {
     min-width: 25%;
     text-align: left;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
   }
-  #content .section-header::before,
-  #content .section-header::after {
+  .section-header::before,
+  .section-header::after {
     display: none;
   }
-  .section--skill div {
+
+  section .section-wrapper {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 2rem;
+    flex-wrap: nowrap;
+  }
+
+  .section--skill .section-wrapper div {
     margin-top: 1rem;
   }
-  #content section div h3 {
+
+  .section--about p {
+    margin-top: 1rem;
+  }
+
+  h3 {
     border-top: none;
     text-align: left;
   }

@@ -15,11 +15,13 @@
 
 <body>
     <header>
-        <h1 class='title'>Joe Lamb</h1>
-        <h2 class='strapline'><span class="strike">Full</span>
+        <h1 id="title">Joe Lamb</h1>
+        <h2 class="strapline"><span class="strike">Full</span>
             <span class="fraction"><sup>1</sup>&frasl;<sub>12</sub></span> &ndash; Stack JavaScript
             Developer</h2>
-        <button class="button"><i class="far fa-envelope"></i> Contact Me</button>
+        <div id="contact">
+            <button class="button button--contact"><i class="far fa-envelope"></i> Contact Me</button>
+        </div>
     </header>
     <nav class="section-nav">
         <ul>
@@ -30,49 +32,63 @@
     </nav>
 
     <div id="content">
+
         <section class="biog section--biog">
-            <p>
-                Learning to build a better world with code. I&rsquo;m currently learning the craft at <a href="https://constructorlabs.com/">Constructor
-                    Labs</a>.
-            </p>
+            <div class="section-wrapper">
+                <p>
+                    I believe code can help make the world a happier, fairer place. So, I’m learning the craft at <a
+                        href="https://constructorlabs.com/">Constructor
+                        Labs</a>.
+                </p>
+            </div>
         </section>
         <section class="skill section--skill">
-            <h2 class="section-header">Skills</h2>
-            <div>
-                <h3><i class="fas fa-code"></i> Code</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
+            <div class="section-wrapper">
+                <h2 class="section-header">Skills</h2>
+                <div>
+                    <h3><i class="fas fa-code"></i> Code</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3><i class="fas fa-pen-fancy"></i> Content</h3>
-                <ul>
-                    <li>Strategy</li>
-                    <li>Marketing</li>
-                    <li>Brand Voice</li>
-                </ul>
+                <div>
+                    <h3><i class="fas fa-pen-fancy"></i> Content</h3>
+                    <ul>
+                        <li>Strategy</li>
+                        <li>Marketing</li>
+                        <li>Brand Voice</li>
+                    </ul>
+                </div>
             </div>
-
         </section>
 
         <section class="portfolio section--portfolio">
-            <h2 class="section-header">Portfolio</h2>
-            <div class=""></div>
-            <div></div>
-            <div></div>
+            <div class="section-wrapper">
+                <h2 class="section-header">Portfolio</h2>
+                <div class="portfolio--project"></div>
+                <div class="portfolio--project"></div>
+                <div class="portfolio--project"></div>
+            </div>
         </section>
 
         <section class="about section--about">
-            <h2 class="section-header">About</h2>
+            <div class="section-wrapper">
+                <h2 class="section-header">About</h2>
+                <p>When I’m not writing, debugging and pushing code to <a href="https://github.com/joelamb"><i class="fab fa-github"></i>
+                        Github</a>, I enjoy cycling and you can follow me, literally, on <a href="https://www.strava.com/athletes/546555">
+                        <i class="fab fa-strava"></i> Strava</a> (you can also see my series of abandoned shopping
+                    trolley photographs there).</p>
+            </div>
         </section>
 
     </div>
     <footer>
         <p>&copy; 2018 Joe Lamb</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
