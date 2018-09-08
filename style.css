@@ -1,0 +1,159 @@
+* {
+    box-sizing: inherit;
+    background: black;
+    color: white;
+  }
+  
+body {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div {
+    text-align: left;
+  }
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
+.logo {
+    min-height: 30vh;
+    margin: 5% 0 0 5%;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.content__body__intro__wrapper {
+    min-height: 70vh;
+    display: flex;
+}
+
+.content__body__intro {
+    align-self: flex-end;
+    margin: 0 20% 10% 5%;
+    font-size: 17px;
+    Font-Family: 'Noto Serif', Serif;
+}
+
+.content__body__bio__title {
+    margin: 10% 20% 0 5%;
+    font-size: 25px;
+    Font-Family: 'Noto Serif', Serif;
+}
+
+#bio_summary {
+    Font-Family: 'Roboto', Serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.content__body__bio__text {
+    margin: 5% 20% 5% 5%;
+    font-size: 14px; 
+    Font-Family: 'Roboto', Serif;
+    columns:3 200px;
+}
+  
+.content__body__projects__title {
+    margin: 10% 20% 0 5%;
+    font-size: 25px;
+    Font-Family: 'Noto Serif', Serif;
+}
+
+.content__body__projects__text {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5% 5% 5%;
+}
+
+.projects {
+    filter: gray; 
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .3s ease-in-out;  
+    width: 270px;
+    height: 180px;
+}
+
+.projects:hover {
+    filter: none;
+    -webkit-filter: grayscale(1);
+    opacity:0.4;
+}  
+
+.content__body__projects {
+    position: relative;
+    width: 270px;
+    height: 180px;
+    padding-top: 15px;
+}
+
+.description_content {
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+    font-size: 13px;
+    text-align: center;
+    Font-Family: 'Roboto', Serif;
+    transform: translate(-50%, -50%);
+    filter:alpha(opacity=60);
+}
+
+.content__body__projects:hover .description_content {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.content__body__contact__title {
+    margin: 10% 20% 0 5%;
+    font-size: 25px;
+    Font-Family: 'Noto Serif', Serif;
+}
+
+.content__body__contact_text {
+    margin: 5% 20% 5% 5%;
+    font-size: 14px; 
+    Font-Family: 'Roboto', Serif;   
+}
+
+@media (min-width: 768px) {
+
+    .content__body__intro {
+        font-size: 25px;
+    }
+
+    .column {
+        flex: 50%;
+        flex-grow: 1;
+    }
+
+    .content__body__projects__text {
+        flex-direction: row;
+        align-items: space-between;
+    }
+
+    .content__body__projects {
+        width: 300px;
+        height: 200px;
+    }
+}
+  
+@media (min-width: 960px) {  
+
+    .content__body__intro {
+        font-size: 25px;
+    }
+}
