@@ -7,7 +7,7 @@ body{
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
     background: black;
-    min-height: 300vh;
+    min-height: 100vh;
     color:white;
     }
 
@@ -20,6 +20,7 @@ body
 }
 
 
+
  .contact{
 
     display: flex;
@@ -30,34 +31,94 @@ body
   
   .title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
+    height: 700px;
   }
 
   .title h2{
-    font-size: 100px;
+    font-size: 10vw;
   }
 
+.arrow{
+  font-size: 50px;
+  
+}
+
+ .rows h3{
+
+font-size: 1vw;
+
+
+ }
+
+ .skills{
  
+  width: 100%;
+  height: 500px;
+  background: yellow;
+  display: flex;
+  justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+}
+
+.boxes{
+  
+  
+
+
+}
+
+.box1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
+.box2{
+  
+ 
+}
 
   .row1{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
-    height: 600px;
-    background: white;
+    height: 800px;
+    background: blue;
   }
+
+  .media img{
+
+    width: 70vw;
+  }
+
+
+
+  
   .row2{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: 600px;
-    background: red;
+    height: 800px;
+    background: white;
   }
-    
+
+  .companies{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 500px;
+    background: yellow;
+  }
 
   /* .slideb {
       position: absolute;
