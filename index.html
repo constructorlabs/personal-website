@@ -14,34 +14,43 @@
 </head>
 
 <body>
-    <header>
-        <h1 id="title">Joe Lamb</h1>
-        <h2 class="strapline"><span class="strike">Full</span>
-            <span class="fraction"><sup>1</sup>&frasl;<sub>12</sub></span> &ndash; Stack JavaScript
-            Developer</h2>
-        <div id="contact">
-            <button class="button button--contact"><i class="far fa-envelope"></i> Contact Me</button>
+    <header id='header'>
+        <div class='header-wrapper'>
+            <h1 id="title"><a href="index.html">Joe Lamb</a></h1>
+            <h2 class="strapline"><span class="strike">Full</span>
+                <span class="fraction"><sup>1</sup>&frasl;<sub>12</sub></span> &ndash; Stack JavaScript
+                Developer</h2>
+            <div id="contact">
+                <button class="button button--contact"><i class="far fa-envelope"></i> Contact Me</button>
+            </div>
         </div>
     </header>
-    <nav class="section-nav">
+    <nav id='nav--main' class="section-nav">
         <ul>
-            <li class="skill">Skills</li>
-            <li class="portfolio">Portfolio</li>
-            <li class="about">About</li>
+            <li class="skill"><a href="#skill">Skills</a></li>
+            <li class="portfolio"><a href="#portfolio">Portfolio</a></li>
+            <li class="about"><a href="#about">About</a></li>
         </ul>
     </nav>
 
     <div id="content">
-
         <section class="biog section--biog">
             <div class="section-wrapper">
+                <img class="biog--photo" src="assets/joe.jpg" alt="">
                 <p>
-                    I believe code can help make the world a happier, fairer place. So, I’m learning the craft at <a
-                        href="https://constructorlabs.com/">Constructor
-                        Labs</a>.
+                    My working life has been pretty varied &ndash; careering from one thing to another &ndash;
+                    take a look at my <a href="https://www.linkedin.com/in/joe-lamb-98610319/">LinkedIn</a> profile
+                    for the full story.
+                </p>
+                <p>
+                    But I believe code can help make the world a happier, fairer place. So, I’m learning the craft at
+                    <a href="https://constructorlabs.com/">Constructor
+                        Labs.</a>
                 </p>
             </div>
         </section>
+
+        <a id='skill' class='anchor'></a>
         <section class="skill section--skill">
             <div class="section-wrapper">
                 <h2 class="section-header">Skills</h2>
@@ -65,15 +74,32 @@
             </div>
         </section>
 
+        <a id='portfolio' class='anchor'></a>
         <section class="portfolio section--portfolio">
             <div class="section-wrapper">
-                <h2 class="section-header">Portfolio</h2>
-                <div class="portfolio--project"></div>
-                <div class="portfolio--project"></div>
-                <div class="portfolio--project"></div>
+                <div class="section-wrapper--description">
+                    <h2 class="section-header">Portfolio</h2>
+                    <p>Please explore this selection of recent work to see my skills in action.</p>
+                </div>
+                <div class="section--portfolio--projects">
+                    <div class="portfolio--project portfolio--project--elevenplustwo">
+                        <a class="button button--portfolio" href="http://elevenplustwo.co.uk/">Visit site</a>
+                        <a class="button button--portfolio" href=""><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="portfolio--project portfolio--project--coming">
+                        <p>Coming soon</p>
+                    </div>
+                    <div class="portfolio--project portfolio--project--coming">
+                        <p>Coming soon</p>
+                    </div>
+                    <div class="portfolio--project portfolio--project--coming">
+                        <p>Coming soon</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <a id='about' class='anchor'></a>
         <section class="about section--about">
             <div class="section-wrapper">
                 <h2 class="section-header">About</h2>
@@ -81,10 +107,11 @@
                         Github</a>, I enjoy cycling and you can follow me, literally, on <a href="https://www.strava.com/athletes/546555">
                         <i class="fab fa-strava"></i> Strava</a> (you can also see my series of abandoned shopping
                     trolley photographs there).</p>
-                <p>My other passion is music. I play with The Crooks Saxophone Quartet and we've got a few tunes up on
+                <p>My other passion is music. I play with <strong>The Crooks Saxophone Quartet</strong> and we've got a
+                    few tunes up on
                     <a href="https://soundcloud.com/the-crooks-saxes"><i class="fab fa-soundcloud"></i> Soundcloud</a>.
-                    I was a member of The Sons of Silence (the band not the motorbike gang) and you can listen on <a
-                        href="https://open.spotify.com/artist/0jMdibLNxSSU0aeqtWbEUt"><i class="fab fa-spotify"></i>
+                    I was a member of <strong>The Sons of Silence</strong> (the band not the motorbike gang) and you
+                    can listen on <a href="https://open.spotify.com/artist/0jMdibLNxSSU0aeqtWbEUt"><i class="fab fa-spotify"></i>
                         Spotify</a>.</p>
                 <p>I used to be called Joe Gardiner, but took my wife’s surname, Lamb, in the summer of 2018.</p>
             </div>

@@ -1,11 +1,11 @@
 /* variables */
 
 :root {
-  --bg-color-header: rgb(77, 87, 121);
-  --bg-color-section-nav: rgb(76, 116, 50);
-  --bg-color-skill: rgba(188, 245, 211, 1);
-  --bg-color-work: rgb(188, 224, 245);
-  --bg-color-about: rgb(245, 209, 188);
+  --color1: rgba(169, 200, 205, 1);
+  --color2: rgba(138, 34, 43, 1);
+  --color3: rgba(171, 145, 128, 1);
+  --color4: rgba(226, 207, 172, 1);
+  --color5: rgba(240, 234, 212, 1);
 
   --text-color: rgb(44, 44, 44);
   --shadow-color: rgba(0, 0, 0, 0.3);
@@ -63,27 +63,37 @@ a {
 }
 
 .skill {
-  background: var(--bg-color-skill);
+  background: var(--color3);
 }
 
 .portfolio {
-  background: var(--bg-color-work);
+  background: var(--color5);
 }
 
 .about {
-  background: var(--bg-color-about);
+  background: var(--color4);
 }
 
 .button {
   background: orange;
+  border-top: 1px solid rgb(248, 200, 97);
   padding: 0.25rem 1rem;
   border: none;
-  border-top: 1px solid rgb(248, 200, 97);
   border-radius: 1rem;
   box-shadow: 0px 3px 5px var(--shadow-color);
   color: white;
   font-family: var(--sans-font);
   text-shadow: 0 -1px 0 var(--shadow-color);
+}
+
+.button--portfolio {
+  background: rgba(0, 0, 0, 0.5);
+  border-top: rgba(0, 0, 0, 0.4);
+  /* margin-bottom: -999px; */
+}
+
+.button--portfolio:hover {
+  background: green;
 }
 
 .sticky {
@@ -93,24 +103,36 @@ a {
   z-index: 20;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -162px;
+  visibility: hidden;
+}
+
 /*****************/
 /* header styles */
 
 header {
-  background: var(--bg-color-header);
+  background: var(--color2);
   text-align: center;
+  width: 100%;
 }
 
 #title {
-  background: var(--bg-color-header);
-  color: rgba(255, 255, 255, 1);
-  font-family: var(--logo-font);
+  background: var(--color2);
   margin: 0;
   padding: 1rem 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+#title a {
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--logo-font);
+  border-bottom: none;
 }
 
 .strapline {
@@ -123,7 +145,7 @@ header {
 
 .strapline .strike {
   text-decoration: line-through;
-  color: rgb(112, 123, 156);
+  color: rgb(172, 107, 112);
 }
 
 .strapline .fraction {
@@ -132,8 +154,9 @@ header {
 }
 
 #contact {
-  background: var(--bg-color-header);
+  background: var(--color2);
   padding-bottom: 1rem;
+  width: 100%;
 }
 
 .button--contact {
@@ -146,7 +169,7 @@ header {
 /* navigation styles */
 
 .section-nav {
-  background: var(--bg-color-section-nav);
+  background: var(--color2);
   display: none;
 }
 
@@ -164,6 +187,15 @@ header {
   text-align: center;
 }
 
+.section-nav ul li a {
+  border-bottom: none;
+  height: 14px;
+  padding-bottom: 2px;
+}
+.section-nav ul li a:hover {
+  border-bottom: 2px solid var(--color2);
+}
+
 /****************************/
 /* main content area styles */
 
@@ -176,6 +208,8 @@ header {
 /******************/
 /* section styles */
 
+/* general styles */
+
 section {
   box-shadow: 0 0 1rem var(--shadow-color);
 }
@@ -183,25 +217,6 @@ section {
 .section-wrapper {
   display: flex;
   flex-wrap: wrap;
-}
-
-section.biog.section--biog {
-  box-shadow: none;
-  padding: 0 1rem;
-}
-
-.biog p {
-  font-size: 1.25rem;
-  font-style: italic;
-}
-
-h3 {
-  border-top: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
-  margin-top: 0;
-  padding: 0.25rem 0;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .section-header {
@@ -227,15 +242,47 @@ h3 {
   transform: rotate(-90deg);
 }
 
+/* biog */
+
+section.biog.section--biog {
+  box-shadow: none;
+  padding: 0 1rem;
+}
+
+.biog p {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.biog--photo {
+  display: none;
+}
+
+/* skill */
+
+.section--skill {
+  padding: 0 0.5rem;
+}
+
 .section--skill .section-wrapper div {
   flex: 1;
   margin: 0 0.5rem;
   padding-bottom: 1rem;
 }
 
+.section--skill h3 {
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  margin-top: 0;
+  padding: 0.25rem 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
 .section--skill ul li {
   font-family: var(--sans-font);
   margin-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 .section--skill ul li::before {
@@ -243,13 +290,61 @@ h3 {
   content: '✓';
   color: white;
   display: inline-block;
-  background: rgba(5, 46, 5, 0.5);
+  background: var(--color2);
   margin-right: 0.5rem;
-  padding: 0.25rem 0.4rem;
+  padding: 0.3rem 0.4rem 0.2rem 0.4rem;
 }
 
+/* portfolio */
+
+.section--portfolio {
+  padding-bottom: 1rem;
+}
+
+.section--portfolio .section-wrapper {
+  justify-content: center;
+}
+
+.section-wrapper--description {
+  min-width: 100%;
+  text-align: center;
+}
+
+.portfolio--project {
+  background-position: center;
+  min-width: 275px;
+  min-height: 275px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.portfolio--project--coming {
+  background: black;
+  background-image: url(assets/placeholder.jpg);
+  background-size: cover;
+}
+
+.portfolio--project--coming p {
+  font-family: var(--sans-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.portfolio--project--elevenplustwo {
+  background-image: url(assets/elevenplustwo.png);
+  background-size: cover;
+}
+
+/*********/
+/* about */
+
 .section--about {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 
 .section--about p {
@@ -259,7 +354,7 @@ h3 {
 /*****************/
 /* footer styles */
 footer {
-  background: var(--bg-color-header);
+  background: var(--color2);
   color: white;
   font-family: var(--sans-font);
   padding: 0.5rem 0;
@@ -269,6 +364,8 @@ footer {
 /*****************/
 /* media queries */
 
+/* iPad / tablet */
+
 @media (min-width: 768px) {
   body {
     /* make page full height in browser */
@@ -276,12 +373,26 @@ footer {
     flex-direction: column;
     min-height: 100vh;
   }
-  #title {
-    /* font-size: 4rem; */
+
+  header {
+    /* position: fixed; */
+    width: 100%;
   }
+
+  .section-nav {
+    /* position: fixed; */
+    top: 165px;
+    width: 100%;
+  }
+
   .strapline {
     font-size: 1.5rem;
   }
+
+  .section-nav {
+    display: block;
+  }
+
   #content {
     flex-grow: 1;
   }
@@ -290,19 +401,44 @@ footer {
     flex: 3;
   }
 
-  section.biog.section--biog {
-    flex: 1;
+  .section-wrapper--description {
+    max-width: 25%;
   }
-  section.biog.section--biog {
+  .section-header {
+    min-width: 25%;
+    text-align: left;
+  }
+
+  .section-header::before,
+  .section-header::after {
+    display: none;
+  }
+
+  section .section-wrapper {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 2rem;
+    flex-wrap: nowrap;
+  }
+
+  .section--biog {
+    flex: 1;
     padding: 1rem 0;
   }
 
-  .biog p {
-    font-size: 1.5rem;
+  .section--biog .section-wrapper {
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .section--biog p {
+    font-size: 1.4rem;
     margin-bottom: 0;
     line-height: 1.2;
+    width: 100%;
   }
-  .biog p::first-letter {
+
+  .biog p:first-child:first-letter {
     color: white;
     font-family: var(--sans-font);
     font-style: normal;
@@ -314,23 +450,20 @@ footer {
     padding: 0.25rem 0.75rem;
     float: left;
   }
-  .biog p::first-letter {
-  }
-  .section-header {
-    min-width: 25%;
-    text-align: left;
-    /* margin-left: 2rem; */
-  }
-  .section-header::before,
-  .section-header::after {
-    display: none;
+
+  .section--portfolio--projects {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  section .section-wrapper {
-    max-width: 960px;
-    margin: auto;
-    padding: 0 2rem;
-    flex-wrap: nowrap;
+  .section-wrapper--description {
+    min-width: 25%;
+    text-align: left;
+  }
+
+  .portfolio--project {
+    min-width: 200px;
+    min-height: 200px;
   }
 
   .section--skill .section-wrapper div {
@@ -346,15 +479,60 @@ footer {
     flex: 1;
   }
 
-  h3 {
+  .section--skill h3 {
     border-top: none;
     text-align: left;
   }
 }
 
 @media (min-width: 960px) {
-  /* .section--wrapper {
-    width: 960px;
-    margin: auto;
-  } */
+  .header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  #title {
+    position: relative;
+    flex: 2;
+  }
+
+  .strapline {
+    flex: 3;
+    margin: 2.5rem 0;
+    text-align: left;
+  }
+
+  .section-nav {
+    top: 115px;
+  }
+
+  #contact {
+    flex: 1;
+  }
+
+  .biog--photo {
+    border-radius: 150px;
+    display: block;
+    float: left;
+    margin: 1rem 2rem 1rem 0;
+    width: 25%;
+  }
+
+  .section--biog .section-wrapper p:first-of-type {
+    margin-top: 1.5rem;
+    padding-top: 3.5rem;
+  }
+
+  .portfolio--project {
+    transition: all, 0.5s;
+  }
+  .portfolio--project:hover {
+    transition: all, 0.5s;
+    transform: scale(1.05);
+    transform: translate(0, 2%);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
 }

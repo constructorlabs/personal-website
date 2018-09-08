@@ -1,23 +1,34 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {
-  myFunction();
-};
-
-// Get the header
+// get elements
 const contact = document.getElementById('contact');
 const content = document.getElementById('content');
+const header = document.getElementById('header');
+const nav = document.getElementById('nav--main');
 
-// Get the offset position of the navbar
+// set scroll offset for mobile (based on height of title and stapline)
 const offset = 53;
 
-console.log(window.pageYOffset);
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > offset) {
-    contact.classList.add('sticky');
-    content.style.marginTop = '64px';
+// define scroll function
+const scrollFunction = () => {
+  // Add sticky class to header & nav and offset content
+  if (window.innerWidth > 767) {
+    header.style.position = 'fixed';
+    nav.style.position = 'fixed';
+    content.style.marginTop = '210px';
+    if (window.innerWidth > 960) {
+      content.style.marginTop = '140px';
+    }
   } else {
-    contact.classList.remove('sticky');
-    content.style.marginTop = 0;
+    // Add sticky class to the contact button when page top reaches offset position.
+    if (window.pageYOffset > offset) {
+      contact.classList.add('sticky');
+      content.style.marginTop = '64px';
+    } else {
+      // Remove sticky class when page top leaves offset position.
+      contact.classList.remove('sticky');
+      content.style.marginTop = 0;
+    }
   }
-}
+};
+
+// call scroll function on scroll event
+window.addEventListener('scroll', scrollFunction);
