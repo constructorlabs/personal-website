@@ -220,46 +220,66 @@ ul{
 }
 
 
-  .row__left{
-    height: 60vw;
-    background: grey;
+.jobs {
+  height: 400px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .row{
+    height: 600px;
+    align-items: center;
+    margin-bottom: 15%;
+  }
+
+
+  .row__left__box{
     display: flex;
-    align-content: flex-start;
-    
+    flex-wrap: wrap;
+    font-weight: 300;
   }
 
- 
+  .row_right_box{
+    display: none;
 
-  .row__left__media img{
-    width: 100vw; 
-    
-  }
-/*
-  .row__left__media h3{  
-    float: right;
-  font-size: 2vw;
-  font-weight: 300; 
-  margin: 100px -250px -200px 100px;
- 
   }
 
-  */
-  .row__left__media h4{  
-    float: top;
-  font-size: 2vw;
-  margin: 0px 0 0px 50px;
+  .row__left__box h4{
+font-weight:300;
+
+  }
+
+
+  .row__header{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+  }
+
+  .row__media img{
+     width:100%;  
+  }
+
+  .row__job {
+    display: flex;
+    flex:1;
+    align-self: flex-start;
+    margin-left: 10%;
+
+  }
+
+  .row__more {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 10%;
+  }
+
   
-
-  }
-
-
-  .row__left__left__box{
-   margin: 50px 0 0 200px;
-    
-  }
-
-  .row__left__left__box h4{
-    font-weight: 300; 
+  .row__description{
+    display: none;
   }
 
 
