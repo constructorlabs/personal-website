@@ -3,6 +3,9 @@ const contact = document.getElementById('contact');
 const content = document.getElementById('content');
 const header = document.getElementById('header');
 const nav = document.getElementById('nav--main');
+const sectionHeaders = Array.from(
+  document.getElementsByClassName('section-header')
+);
 
 // set scroll offset for mobile (based on height of title and stapline)
 const offset = 53;

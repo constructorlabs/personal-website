@@ -10,11 +10,12 @@
   --text-color: rgb(44, 44, 44);
   --shadow-color: rgba(0, 0, 0, 0.3);
 
+  --logo-font: 'Montserrat', sans-serif;
   --sans-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  --logo-font: 'Rock Salt', cursive;
 
   --stickyHeaderHeight: 68px;
+  --animationSlideOffset: -99em;
 }
 
 /*
@@ -146,14 +147,15 @@ header {
   padding: 0.5rem 0 0 0;
 }
 
-.strapline .strike {
-  text-decoration: line-through;
-  color: rgb(172, 107, 112);
+.strapline .blur {
+  color: transparent;
 }
 
-.strapline .fraction {
+.strapline .fraction.blur--reverse {
+  color: white;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-left: -3rem;
 }
 
 #contact {
@@ -174,6 +176,7 @@ header {
 .section-nav {
   background: var(--color2);
   display: none;
+  overflow: hidden;
 }
 
 .section-nav ul {
@@ -227,6 +230,14 @@ section {
   text-align: center;
 }
 
+h2.section-header {
+  font-family: var(--logo-font);
+}
+
+.section--portfolio .section-header {
+  margin-bottom: 0;
+}
+
 .section-header::before {
   content: '⫱';
   display: inline-block;
@@ -249,12 +260,13 @@ section {
 
 section.biog.section--biog {
   box-shadow: none;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .biog p {
   font-size: 1.25rem;
   font-style: italic;
+  margin-bottom: 0;
 }
 
 .biog--photo {
@@ -487,8 +499,65 @@ footer {
     text-align: left;
   }
 }
+/* desktop */
 
-@media (min-width: 960px) {
+@media (min-width: 1012px) {
+  /* animations */
+
+  @keyframes slideInFromLeft {
+    to {
+    }
+    from {
+      margin-left: var(--animationSlideOffset);
+    }
+  }
+
+  @keyframes blur {
+    to {
+      color: transparent;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0);
+    }
+    from {
+    }
+  }
+
+  @keyframes blur--reverse {
+    to {
+      color: white;
+    }
+    from {
+      color: transparent;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0);
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    to {
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+    from {
+      margin-bottom: var(--animationSlideOffset);
+      padding-top: var(--animationSlideOffset);
+    }
+  }
+
+  /* slide in header elements */
+  #title {
+    animation-name: slideInFromLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  /* slide in nav */
+  .section-nav ul {
+    margin-bottom: var(--animationSlideOffset);
+    padding-top: var(--animationSlideOffset);
+    animation-name: slideInFromBottom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
   .header-wrapper {
     display: flex;
     justify-content: center;
@@ -512,6 +581,28 @@ footer {
     text-align: left;
   }
 
+  .strapline .blur {
+    color: white;
+  }
+  .strapline .blur {
+    animation-name: blur;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .strapline .fraction.blur--reverse {
+    color: transparent;
+    font-size: 1.5rem;
+  }
+
+  .strapline .fraction.blur--reverse {
+    animation-name: blur--reverse;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
   .section-nav {
     top: 115px;
   }
@@ -531,6 +622,12 @@ footer {
   .section--biog .section-wrapper p:first-of-type {
     margin-top: 1.5rem;
     padding-top: 3.5rem;
+  }
+
+  .section-header {
+    padding-top: 2rem;
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
   }
 
   .portfolio--project {
