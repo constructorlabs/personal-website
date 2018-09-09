@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    height: 100vmax;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 7%;
+    padding: 5px;
+    background-color: lavenderblush;
+    color: indigo;
+}
+
+h1 { 
+    font-family: "Montserrat", "Gill Sans MT", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+/* Dropdown button */
+.header__dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: indigo;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /* text-align: left; */
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .header__dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  main {
+      padding: 5px;
+      background-color: white;
+      height: 87%;
+  }
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    flex: 0 0 auto;
+}
+
+.photo {
+    align-self: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    box-align: center;
+}
+
+#special{
+    color: indigo;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align:  center;
+}
+
+p {
+    text-align:  center;
+}
+.footer {
+    padding: 5px;
+    flex: 0 0 auto;
+    text-align: center;
+    background-color: lavenderblush;
+    color: indigo;
+}
+
+@media(min-width: 768px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        align-content: flex-start;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 80px;
+        padding: 0px;
+    }
+
+    main {
+        display: flex;
+        order: 3;
+        padding: 0px;
+        width: 90vw;
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+    }
+
+    .writeUp {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 10px;
+        
+    }
+    .footer {
+        display: flex;
+        height: 50vh;
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .header__dropdown .dropbtn {
+        display: none;
+    }
+
+    .header__dropdown .dropdown-content {
+        display: inline;
+        position: inherit;
+        background-color: inherit;
+        min-width: inherit;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    .dropdown-content a {
+        color: indigo;
+        text-align: center;
+        padding: 30px 16px;
+    }
+}
