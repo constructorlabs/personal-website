@@ -412,20 +412,10 @@ font-weight:300;
 .footer{
 
  
-    
-}
-
-@-webkit-keyframes fadeinout {
-  50% { opacity: 1; }
-}
-
-@keyframes fadeinout {
-  50% { opacity: 1; }
-}
 
   
+}
 
-/*
 
 @keyframes fadein {
     0% {
@@ -440,4 +430,3 @@ font-weight:300;
 
     }
 
-/*
