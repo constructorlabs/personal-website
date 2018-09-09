@@ -5,70 +5,121 @@
 
 body{
     display: flex;
+    flex:1;
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
-    background: black;
+    background: red;
     color:black;
     
     }
 
-
-
 .app {
   
   display: flex;
-  flex:1;
   flex-direction: column;
+  flex:1;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.parallax_container{
+  
+  
+}
+
+.hero {
+  display: flex;
+  flex: 1 0 auto;
+  height: 100vh;
+  color: white;
+  background: black;
+  position: relative;   
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+  padding-top: 15%;
+  
+}
+
+.hero h2{
+  font-size: 30px;
+  padding: 0;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+
+/*
+.hero:hover{
+  background-image: url("https://chrisphillers.000webhostapp.com/img/placeholder1.jpg"); 
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  
+}
+*/
+
+.hero__contents {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 
+
+ .CP__logo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 0% 2% 0%;
+ }
+
+ .CP__logo h1{
+  color: white;
+  font-weight: 600;
+  font-size: 70px;
+  margin: 0;
+
+ }
+
+ a{
+  text-decoration: none;
+  color: white;
+}
 
 .dot {
   margin: 0;
-  font-size: 100px ;
-  font-weight: 600;
-  color:white;
   animation: fadein 2s infinite;
 }
 
-.logo {
-  color:white;
-  margin: 0;
+.contact{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0% 2% 0 1%;
   font-weight: 600;
-  font-size: 100px ;
+  font-size: 15px;
+  margin-top: -16%;
+  margin-left: 2%;
+    
+  }
 
+
+#btn:hover ~ .slideout {
+  bottom: 150%;
 }
 
- .contact{
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px 20px;
-    
-  }
   #header{
-   
+    
   }
   
-  .title {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
-   
 
-    
-    
-  }
 
-  .title h2{
-    font-size: 10vw;
-    margin-bottom: 0;
-  }
+  #btn:hover > .body{
+    background: black;
+    }
 
 .arrow{
   font-size: 4vw;
@@ -77,7 +128,10 @@ body{
 }
 
 .rows{
-  
+  display: block;
+  position: relative;
+  background-color: white;
+  z-index: 1;
 }
 
  .rows h3{
@@ -104,8 +158,8 @@ font-size: 1vw;
 }
 
 .skills img{
-  width:100px;
-  margin: 20px;
+  width:13vw;
+  margin: 1vw;
 }
 
 ul{
@@ -119,7 +173,7 @@ ul{
 }
 
 
-  .row1{
+  .row__left{
     height: 800px;
     background: white;
     display: flex;
@@ -129,37 +183,88 @@ ul{
 
  
 
-  .row__media img{
-    width: 700px; 
+  .row__left__media img{
+    width: 40vw; 
     
   }
-
-  .row__media h3{  
+/*
+  .row__left__media h3{  
     float: right;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 300; 
   margin: 100px -250px -200px 100px;
  
   }
 
-  .row__media h4{  
+  */
+  .row__left__media h4{  
     float: top;
-  font-size: 30px;
+  font-size: 2vw;
   margin: 0px 0 0px 50px;
+  
 
   }
 
 
-  .row1__left__box{
+  .row__left__left__box{
    margin: 50px 0 0 200px;
     
   }
 
-  .row1__left__box h4{
+  .row__left__left__box h4{
     font-weight: 300; 
   }
+
+
+/* RIGHT BOX!!!!*/
+
+.row__right{
+  height: 800px;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+
+
+.row__right__media img{
+  width: 40vw; 
+  
+}
+
+/*.row__right__media h3{  
+  float: left;
+font-size: 2vw;
+font-weight: 300; 
+margin: -100px 250px -200px 100px;
+
+}
+*/
+
+.row__right__media h4{  
+  float: top;
+  font-size: 2vw;
+margin: 0px 0 0px 50px;
+
+
+}
+
+
+.row__right__left__box{
+ margin: 100px 150px 0 200px;
+  
+}
+
+.row__right__left__box h4{
+  font-weight: 300; 
+}
+
+  /* END OF RIGHT BOX/*
+
+  
 /*
- .row1__right__box{
+ .row__right__right__box{
   display: flex;
   
   flow:1;
@@ -167,7 +272,7 @@ ul{
  }
 */
 
-
+/*
   
 .row2{
     display: flex;
@@ -177,9 +282,10 @@ ul{
     height: 800px;
     background: white;
   }
-
+  */
 .companies{
     width: 100%;
+    height: 300px;
     background: blueviolet;
     padding-bottom: 20px;
    
@@ -195,8 +301,8 @@ ul{
 
 .companies img{
 
-  width:100px;
-  margin: 20px;
+  width:13vw;
+  margin: 1vw;
 
 }
 
@@ -219,12 +325,12 @@ ul{
 }
 
 
-/* transition animation effect */
+/* transition animation effect 
 :hover .slideout {
-  bottom: -150%;
+  bottom: 150%;
     
   }
-
+*/
 .slideout {
   position: fixed;
   bottom: -150%;
@@ -236,31 +342,15 @@ ul{
 }
 
 
-.body__content{
-    display:flex;
-    flex:1;
-}
 
-.body__content h1{
-   font-size: 64px;
-    
-}
 
 .footer{
 
-  position: fixed;
-  bottom: 3%;
-  right: 3%
-
-
+ 
     
 }
 
-.footer__logo {
 
-    
-    
-}
 
 
   
