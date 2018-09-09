@@ -7,9 +7,17 @@ body {
   background:#fff;
 }
 
-h3 span{
-  font-family: ;
-  
+h3{
+  font-family: 'Merriweather', serif;
+}
+
+span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card--labs span{
@@ -22,7 +30,7 @@ h3 span{
 .split {
   display: flex;
   flex-flow: row nowrap;
-  min-height: 100vh;
+  min-height: 70vh;
  
 }
 
@@ -76,7 +84,7 @@ h3 span{
 
 
 .card--jamal {
-  height: 220px;
+  height: 240px;
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
@@ -88,7 +96,7 @@ h3 span{
 }
 
 .card--labs {
-  height: 220px;
+  height: 240px;
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
