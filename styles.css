@@ -26,6 +26,7 @@ Styles
   - sections
 - footer
 - media queries
+- utility
 */
 
 /*****************/
@@ -38,6 +39,8 @@ html {
 body {
   color: var(--text-color);
 }
+
+/* typography */
 
 h2,
 h3 {
@@ -57,10 +60,12 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  border-bottom: 1px solid #ff8e8c;
+  border-bottom: 1px solid var(--color2);
   color: #2e4756;
   font-weight: 700;
 }
+
+/* utility classes */
 
 .skill {
   background: var(--color3);
@@ -85,15 +90,13 @@ a {
   font-family: var(--sans-font);
   text-shadow: 0 -1px 0 var(--shadow-color);
 }
+.button:hover {
+  background: green;
+}
 
 .button--portfolio {
   background: rgba(0, 0, 0, 0.5);
   border-top: rgba(0, 0, 0, 0.4);
-  /* margin-bottom: -999px; */
-}
-
-.button--portfolio:hover {
-  background: green;
 }
 
 .sticky {
@@ -313,7 +316,7 @@ section.biog.section--biog {
 .portfolio--project {
   background-position: center;
   min-width: 275px;
-  min-height: 275px;
+  min-height: 175px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -462,8 +465,8 @@ footer {
   }
 
   .portfolio--project {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 230px;
+    min-height: 160px;
   }
 
   .section--skill .section-wrapper div {
@@ -499,6 +502,10 @@ footer {
     flex: 2;
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
   .strapline {
     flex: 3;
     margin: 2.5rem 0;
@@ -527,6 +534,8 @@ footer {
   }
 
   .portfolio--project {
+    min-width: 205px;
+    min-height: 205px;
     transition: all, 0.5s;
   }
   .portfolio--project:hover {
@@ -534,5 +543,27 @@ footer {
     transform: scale(1.05);
     transform: translate(0, 2%);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/***********/
+/* utility */
+
+.desktop-only {
+  display: none;
+}
+
+.ipad-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .ipad-only {
+    display: flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .desktop-only {
+    display: flex;
   }
 }
