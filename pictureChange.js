@@ -1,11 +1,10 @@
 window.onscroll = () => changeMenu();
 
 function changeMenu() {
-  let scrolledCount = 0;
-  var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+  let scrollBarPosition = window.pageYOffset | document.body.scrollTop;
 
-  // At specifiv position do what you want
-  if (scrollBarPosition === 300) {
+  if (scrollBarPosition === 200) {
     document.getElementById("logo--img").src = "images/luke_coffee.png";
+    console.log("Position reached.");
   }
 }

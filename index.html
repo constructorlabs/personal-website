@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_dark.css">
+    <script src="pictureChange.js"></script>
 </head>
 
 <body>
@@ -18,54 +19,80 @@
 
         <header class="masthead">
             <ul class="masthead__controls">
-                <li class="logo"><img src="https://placeholder.pics/svg/50/FFFFFF-FFFFFF"></li>
+                <li class="logo"><img id="logo--img" src="images/away.png" height="300" width="300"></li>
                 <li class="contact"><a href="" class="contact__link">Contact Me</a></li>
             </ul>
         </header>
 
         <section class="introduction__section">
             <div class="intro">
-                <h2 class="intro__header">This will be a cool header some day...</h2>
-                <p class="break__text">And this will be an even cooler introductory message...</p>
+                <h1 class="intro__header">This will be a cool header some day...
+                    </h2>
+                    <p class="break__text">And this will be an even cooler introductory message...</p>
             </div>
         </section>
 
         <section class="skills__section">
             <div class="skills_header">
-                <h2 class="section__header__text">What I Can Do</h2>
+                <h1 class="section__header__text">What I Can Do
+                    </h2>
             </div>
             <div class="skills">
                 <div class="skill__column__one">
                     <h2>Front End Developer</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.</p>
                 </div>
                 <div class="skill__column__two">
                     <h2 class="writer">Writer</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <img src="images/pencil.png" alt="pencil">
                 </div>
                 <div class="skill__column__three">
                     <h2>Visual Concepts</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.</p>
+                    <img src="images/organization-chart.png" alt="chart">
                 </div>
             </div>
         </section>
 
         <section class="work__section">
             <div class="work__text">
-                <h2 class="break__text"> Things I've Built...</h2>
+                <h1 class="break__text"> Things I've Built...
+                    </h2>
             </div>
-            <div class="work__images">
+            <div class="work__images__wrapper">
+                <div class="work__images">
+                    <div class="cell">
+                        <img class="proj__img" src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image">
 
-                <div class="cell">
-                    <img src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image"></figure>
-                </div>
-                <div class="cell">
-                    <img src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image"></figure>
-                </div>
-                <div class="cell">
-                    <img src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image"></figure>
-                </div>
-                <div class="cell">
-                    <img src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image"></figure>
-                </div>
+                        <div class="image__interior">
+                            <div class="proj__img__text">Project</div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <img class="proj__img" src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image">
+                        <div class="image__interior">
+                            <div class="proj__img__text">Project</div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <img class="proj__img" src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image">
+                        <div class="image__interior">
+                            <div class="proj__img__text">Project</div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <img class="proj__img" src="https://placeholder.pics/svg/300/FFFFFF-FFFFFF" alt="Work Image">
+                        <div class="image__interior">
+                            <div class="proj__img__text">Project</div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
         </section>
 
@@ -73,8 +100,8 @@
             <footer class="footer">
                 <div class="social__media">
                     <ul class="social__icons">
-                        <li><a><img height="50px" width="50px" src="images/linkedin.svg"></a></li>
-                        <li><a><img height="50px" width="50px" src="images/twitter.svg"></a></li>
+                        <li class="button__grow"><a href="www.google.co.uk"><img height="30px" width="30px" src="images/linkedin.svg"></a></li>
+                        <li class="button__grow"><a href="www.google.co.uk"><img height="30px" width="30px" src="images/twitter.svg"></a></li>
                     </ul>
                 </div>
             </footer>
