@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #f4f4f4;
+    background: #e4e3e3;
     color: #666666;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 11pt;
@@ -17,7 +17,7 @@ p {
     margin: 0 0 2em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-weight: 400;
     line-height: 1.5;
     margin: 0 0 1em 0;
@@ -36,18 +36,6 @@ h2 {
 h3 {
     font-size: 1.25em;
     font-weight: 600;
-}
-
-h4 {
-    font-size: 1em;
-}
-
-h5 {
-    font-size: 0.9em;
-}
-
-h6 {
-    font-size: 0.7em;
 }
 
 li {
@@ -91,15 +79,11 @@ li {
             color: inherit;
         }
 
-        .project header h1, .project header h2, .project header h3, .project header h4, .project header h5, .project header h6 {
+        .project header h1, .project header h2, .project header h3 {
             color: #ffffff;
         }
 
         .project header a {
-            -moz-transition: -moz-transform 0.2s ease;
-            -webkit-transition: -webkit-transform 0.2s ease;
-            -ms-transition: -ms-transform 0.2s ease;
-            transition: transform 0.2s ease;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -109,17 +93,6 @@ li {
             width: 100%;
             height: 100%;
             display: block;
-            filter: gray; 
-            -webkit-filter: grayscale(1); 
-        }
-
-        .project header:hover a {
-            -moz-transform: scale(1.02);
-            -webkit-transform: scale(1.02);
-            -ms-transform: scale(1.02);
-            transform: scale(1.02);
-            filter: none;
-            -webkit-filter: grayscale(0);
         }
 
         .project header > * {
@@ -207,20 +180,12 @@ li {
         color: inherit;
     }
 
-        #header a:hover {
-            color: #EF6480 !important;
-        }
-
-    #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+    #header h1, #header h2, #header h3 {
         color: #ffffff;
     }
 
     #header {
         background-attachment: scroll;
-    }
-
-    #header hr {
-        border-bottom-color: #ffffff;
     }
 
     #header:before {
@@ -271,18 +236,14 @@ li {
             max-width: 50em;
         }
 
-    body.is-loading #header.alt:before {
-        background-color: black;
-    }
-
-    body.is-loading #header.alt .inner {
-        opacity: 0;
-    }
-
 /* Main */
 
+#project_title {
+    padding-top: 2em;
+    text-align: center;
+}
+
 #main {
-    padding: 4em 4em 2em 4em;
     padding: 2em 2em 0.1em 2em;
     background-color: #ffffff;
     border-radius: 4px;
@@ -295,7 +256,6 @@ li {
 /* Intro */
 
 #intro {
-    
     padding: 2em 2em 0.1em 2em;
     background-color: #ffffff;
     border-radius: 4px;
@@ -432,5 +392,23 @@ h3 {
     .projects .project {
         margin: 1em 1em 1em 1em;
         width: calc(50% - 5em);
+    }
+
+    .project header a {
+        -moz-transition: -moz-transform 0.2s ease;
+        -webkit-transition: -webkit-transform 0.2s ease;
+        -ms-transition: -ms-transform 0.2s ease;
+        transition: transform 0.2s ease;
+        filter: gray; 
+        -webkit-filter: grayscale(1); 
+    }
+
+    .project header:hover a {
+        -moz-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        filter: none;
+        -webkit-filter: grayscale(0);
     }
 }
