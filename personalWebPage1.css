@@ -1,0 +1,296 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  /*background-color: rgb(70,130,180);*/
+  color: rgb(245,255,250);
+  flex: 1;
+  flex-wrap: wrap;
+  background-image: url("blueYellowBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:100%;
+}
+
+
+header{
+  font-size: 40px;
+  font-family: "Indie Flower";
+  background-color: rgba(240,255,255,0.2);
+  border-radius: 20px;
+  margin: 0px 10px;
+  text-decoration: underline;
+  color: #696969;
+  }
+
+  .guessJob, .wordBlockOne, .wordBlockTwo, .footer__copyright {
+    font-family: "Poor story";
+  }
+
+.contentAround {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .twoPreviousStudy{
+    display: none;
+  }
+
+  .proton {
+    background-color: rgba(240,255,255,0.2);
+    border-radius: 20px;
+    flex: 1;
+    width: 100;
+    height: 400px;
+  }
+
+  .row {
+    flex:1;
+  }
+
+ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+  }
+
+ul :hover {
+      color: pink;
+    }
+
+li {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 25px;
+    }
+
+nav form{
+    line-height: 4;
+  }
+
+input[type="search"] {
+  border: 2px solid pink;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  font-size: 50px;
+  text-decoration: overline underline;
+}
+
+.content__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+
+p {
+  font-size: 20px;
+}
+
+.thumbsUp {
+  background-color: rgba(255,215,0,0.8);
+  font-size: 30px;
+  color: ;
+  border-radius: 20px;
+  font-family: "Indie Flower";
+}
+
+.wordBlockOne {
+  background-color: rgba(240,255,255,0.2);
+  border-radius: 20px;
+  font-family:
+}
+
+.expecting {
+  background-color: rgba(255,215,0,0.8);
+  font-size: 30px;
+  color: ;
+  border-radius: 20px;
+  font-family: "Black Ops One";
+  font-family: "Indie Flower";
+}
+
+.wordBlockTwo {
+  background-color: rgba(240,255,255,0.2);
+  border-radius: 20px;
+  font-family:
+}
+
+.content__aside{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(240,255,255,0.2);
+  border-radius: 20px;
+  flex: 1;
+  margin: 0px 10px;
+  display: none;
+}
+
+.footer__copyright {
+  margin-top: 20px;
+}
+
+
+@media (min-width: 768px) {
+
+ header {
+   margin-bottom: 20px;
+ }
+
+
+.twoPreviousStudy{
+  display: flex;
+  display: block;
+  flex: 1;
+  align-items: center:
+  margin-top: 40px;
+  order:
+}
+
+/*:hover{
+  color: pink;
+}*/
+
+.joke {
+  display: none;
+}
+
+ .openU {
+   height: 150px;
+   width: 150px;
+   border:12px solid rgba(255,215,0,0.7);
+   border-radius: 20px;
+   order: -1;
+   flex: 1;
+ }
+
+ #timeInOu {
+  font-family: "Indie Flower";
+ }
+
+ #timeInConstructor {
+   font-family: "Indie Flower";
+ }
+
+#chemistryPun {
+  font-family: "Indie Flower";
+}
+
+ .constructorLabs {
+   height: 150px;
+   width: 150px;
+   order: -2;
+   flex: 1;
+   border:12px solid rgba(255,215,0,0.7);
+   border-radius: 20px;
+ }
+
+  .row {
+    display: flex;
+    flex: 1;
+  }
+
+  nav {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  main {
+    flex: 3;
+    margin-right: 10px;
+  }
+
+.content__nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  margin-bottom: auto;
+  margin-right: 75px;
+  background-color: rgba(112,128,144,0.8);
+  border-radius: 20px;
+}
+
+.oneNavLinks {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  list-style: none;
+  background-color: rgba(112,128,144,0.8);
+  border-radius: 20px;
+  margin-right: 10px;
+  order: 0;
+}
+
+.threeFormNav {
+  order: -1;
+  flex: 1;
+}
+
+
+
+.content__body {
+  display: flex;
+  flex: 1;
+}
+
+.thumbsUp {
+  flex: 1
+}
+
+.expecting {
+  flex: 4;
+}
+
+
+
+}
+
+@media (min-width: 960px) {
+
+  .nav {
+    flex: 4;
+  }
+
+  .main {
+     flex: 1;
+  }
+
+  .content__nav{
+    justify-content: space-between;
+  }
+
+  .joke {
+    display: block;
+  }
+
+  #chemistry{
+    display: block;
+    display: flex;
+    flex-direction: column;
+
+    height: 150px;
+    width: 150px;
+    order: -2;
+    flex: 1;
+    border:12px solid rgba(255,215,0,0.7);
+    border-radius: 20px;
+    margin: auto;
+
+
+  }
+
+  .content__aside {
+    display: block;
+    background-color: rgba(112,128,144,0.8);
+    border-radius: 20px;
+    font-family: "Indie Flower";
+  }
+
+}
