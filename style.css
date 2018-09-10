@@ -1,0 +1,377 @@
+* {
+    box-sizing: inherit;
+  }
+
+
+  :root {
+    --primary-color:#91867E;
+    --secondary-color: #910052;
+    --tertiary-color: #FFAA5A;
+    --skills-color:#95A1C3;
+    --portfolio-color: #B2C891 ;
+    --work-color:#E49969 ;
+    --life-color: #AD85BA;
+    --contact-color: #C88691;
+    --nav-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .figure {
+    display: table;
+    margin: 0;
+  }
+  
+  .figure img {
+    max-width: 100%;
+  }
+  
+  .figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    background-color: var(--tertiary-color);
+    color:white;
+    padding: 10px;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background:#BBCDE5;
+  }
+
+
+  ul {
+      padding-left: 0;
+  }
+
+  p {
+      margin:5px;
+    }
+
+    h1 {
+    font-size: 2em;
+    font-weight:100;
+    display: block;
+    margin:0;
+  }
+    h2 {
+        padding =0;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        padding-top: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        background: white;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .nav__home {
+        display:flex;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 20px;
+        font-weight: 600;
+        background: var(--primary-color);
+        color: white;
+        flex:1;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 20px;
+        font-weight: 600;
+        background: var(--primary-color);
+        font-family: var(--nav-font);
+    }
+
+
+
+    .nav__links {
+        display: flex;
+        flex-direction: row;
+        flex-grow:1;
+        flex-wrap: wrap;
+        margin:0px;
+        padding-left:0px;
+        flex:11;
+    }
+
+
+
+    .nav__links__link {
+        display: flex;
+        flex:1;
+        background: var(--primary-color);
+        color: white;
+        margin:0px;
+        padding:5px 0px 5px 10px;
+        min-width:150px;
+        font-family: var(--nav-font);
+        font-weight:300;
+        font-size: 20px;
+    }
+
+    .nav__links__link a, .nav__home a{
+        color: white; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+      }
+
+    .nav__skills {
+        background: var(--skills-color);
+    }
+
+    .nav__portfolio {
+        background: var(--portfolio-color);
+    }
+
+    .nav__work {
+        background: var(--work-color);
+    }
+
+    .nav__life {
+        background: var(--life-color);
+    }
+
+    .nav__contact {
+        background: var(--contact-color);
+    }
+
+    .nav__links__link__contact {
+        color: var(--tertiary-color);
+    }
+
+    .nav__blank {
+        display:none;
+    }
+
+    .nav__home__tablet {
+        display:none;
+    }
+
+    .content__main {
+        background: #BBCDE5;
+        padding:10px;
+        flex-grow:1;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .content__main__intro {
+        text-align: center;
+    }
+
+    .footer {
+        padding:10px;
+        background:var(--primary-color);
+    }
+    
+    .home__images {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home__image__2 {
+        display: none;
+    }
+
+    .home__image__3 {
+        display: none;
+    }
+
+    .home__image__4 {
+        display: none;
+    }
+
+
+    .responsive__content {
+        display: flex;
+        flex-direction: row;
+        margin-top:20px;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        flex:10;
+        flex-wrap:wrap;
+    }
+
+    .skill {
+        display:flex;
+        flex-direction: row;
+        min-width: 300px;
+        margin-bottom: 20px;
+        flex-wrap:wrap;
+        background:white;
+    }
+
+    .skill__header {
+        display:flex;
+        flex-direction: row;
+    }
+
+    .skill__body {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .skill__name {
+        display:flex;
+        flex:1;
+        min-width:200px;
+        font-size:2em;
+        justify-content:flex-end;
+        margin:5px 10px 0px 0px;
+
+    }
+
+    .skill__text {
+        min-width:200px;
+        margin-top: 15px;
+        margin-bottom:15px;
+        margin:10px 5px 10px 5px;
+
+    }
+
+    .skill__links {
+        margin:0px 5px 5px 5px;  
+    }
+
+    .skill__logo {
+        padding:5px 0px 0px 5px;
+    }
+
+    .margin {
+        display:flex;
+        flex:1;
+    }
+
+    .link {
+        display:list-item;
+        list-style-type: square;
+        margin-left: 20px;
+    }
+
+    .sidebar {
+        display:none;
+    }
+
+    @media (min-width: 768px) {
+        .home__image__2 {
+            display: table;
+            margin-left: 30px;
+        }
+        .nav__links {
+            align-content: flex-start;
+        }
+        .nav__links__link {
+            font-size: 30px;
+            min-width:240px;
+        }
+
+        .skill__body {
+            flex-direction:row;
+        }
+
+        .skill__text {
+            flex:7;
+        }
+
+        .skill__links {
+            flex:3;
+        }
+
+        .skill__header {
+            flex:1;
+            display:flex;
+        }
+
+        .skill__logo {
+            flex:3;
+        }
+
+        .skill__name {
+            flex:4;
+        }
+
+        .skill__spacer {
+            flex:3;
+        }
+        .nav__home__mobile {
+            display:none;
+        }
+
+        .nav__blank__spacer {
+            display:none;
+        }
+
+        .nav__home__tablet {
+            display: flex;
+        }
+
+
+      }
+    
+      @media (min-width: 960px) {
+        .home__images {
+            flex-wrap: wrap;
+            width: 600px;
+        }
+
+        .home__image__1, .home__image__2, .home__image__3, .home__image__4 {
+            display: table;
+            margin-left: 30px;
+            margin-bottom:30px;
+        }
+
+        .nav__home {
+            display:none;
+        }
+
+        .nav__blank {
+            display:none;
+        }
+
+       .nav__blank__spacer {
+           display:flex;
+       }
+
+       .nav__links__link {
+        min-width:130px;
+      }
+
+      .sidebar {
+          display:flex;
+          flex:3;
+          flex-direction:column;
+          background:white;
+          margin-bottom:20px;
+          align-items: center;
+      }
+
+      .sidebar__photo {
+        background-image: url(images/phil_with-skis.jpeg);
+        background-size: contain;
+      }
+
+      }
