@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family:"Bangers", serif;
+  width: 100%;
+  height: auto;
+}
+.grid-container {
+}
+
+/************ SECTIONS */
+.item1 {
+  background-color: white;
+}
+.item2 {
+
+  background-color: black;
+  padding-bottom: 2em;
+  }
+.item3 {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #4d4d4d;
+  width: 100%;
+}
+.item5 {
+
+  background-color: #595959;
+}
+.item6 {
+
+  background-color: #a6a6a6;
+}
+
+/************* NAVMENU */
+.nav {
+  display: flex;
+  height: 3em;
+  margin:1% 0 1% 75%;
+  list-style-type: none;
+}
+.nav > li {
+    flex: 1;
+    }
+li > a {
+  color:black;
+}
+/************* MAINSECTION */
+.mainSection{
+  color : white;
+  }
+.presentation {
+  margin-left: 50%;
+  padding-top: 6em;
+  padding-right: 4em;
+  letter-spacing: .3em;
+  }
+.mainImage {
+}
+.mainText {
+  margin-top: 2em;
+}
+
+/************* PORTFOLIO */
+.portfolio{
+}
+.myWork {
+}
+.img-responsive {
+  max-width: 95%;
+  padding:1%;
+}
+.text-center {}
+
+
+
+
+
+  /************* contact */
+  .contact {
+    text-align: center;
+}
+
+.social {
+  display: flex;
+  height: 3em;
+  margin:0 auto;
+  padding-top: 2em;
+
+}
+.social > li {
+    flex: 1;
+    list-style-type: none;
+}
+
+
+
+  /**************** footer */
+
+  .footer {
+    text-align: center;
+  }
