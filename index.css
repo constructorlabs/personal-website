@@ -1,0 +1,50 @@
+.container {
+    font-family: 'Indie Flower', cursive;
+}
+
+li {
+    display: inline;
+    position: relative;
+    top: 10px;
+    padding: 20px;
+    align-content: end;
+    font-size: 20px;
+    color: #102542
+}
+
+h1 {
+    padding: 20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 75px;
+    color: #102542
+}
+
+.profilephoto {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    bottom: 10px;
+/* --------------------- Below is temporary - until I sort grid --------------------- */
+    left: 275px;
+}
+
+.profileborder {
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+p {
+    padding: 20px;
+    font-size: 20px;
+    color: #102542
+}
+
+button {
+    margin: 20px;
+}
+
+.LI-profile-badge {
+    padding: 20px;
+}
