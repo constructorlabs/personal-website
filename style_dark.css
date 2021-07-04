@@ -1,0 +1,250 @@
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background: #171d23;
+  box-sizing: border-box;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+}
+
+.app {
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.masthead {
+  display: flex;
+  background: #1d252c;
+}
+
+.masthead__controls {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  list-style-type: none;
+
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contact {
+  align-self: center;
+  background-color: #1d252c;
+  padding: 15px 20px 15px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  font-size: 2em;
+}
+.contact:hover {
+  background-color: #095f40;
+}
+.contact:hover .contact__link {
+  color: #fff;
+}
+
+.introduction__section {
+  display: flex;
+  color: #fff;
+}
+.intro {
+  flex-grow: 1;
+  background: #1d252c;
+}
+
+.intro__header {
+  margin: 0;
+  flex-grow: 1;
+}
+
+/*Unoptimised past this point ↓*/
+
+.break__text {
+  margin: 10 5 5 5;
+  flex-grow: 3;
+  color: #fff;
+}
+
+.skills__section {
+  display: flex;
+  flex-direction: column;
+}
+.skills_header {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #1d252c;
+}
+
+.section__header__text {
+  align-self: center;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  background: #171d23;
+}
+
+.skills > div > h2 {
+  color: #fff;
+}
+
+.skill__column__one {
+  flex-grow: 1;
+  margin: 30px;
+}
+
+.skill__column__two {
+  flex-grow: 1;
+  margin: 30px;
+}
+.skill__column__three {
+  flex-grow: 1;
+  margin: 30px;
+}
+.work__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.work__text {
+  background-color: #1d252c;
+}
+.work__text > h2 {
+  color: #fff;
+}
+
+.work__images__wrapper {
+  background: #333f4a;
+  display: flex;
+  justify-content: center;
+}
+
+.work__images {
+  display: flex;
+  max-width: 900px;
+  flex-direction: column;
+  flex: 3;
+  width: 70%;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cell:hover .proj__img {
+  opacity: 0.3;
+}
+
+.cell:hover .image__interior {
+  opacity: 1;
+}
+
+.proj__img {
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.image__interior {
+  position: absolute;
+  transition: 0.5s ease;
+  width: 150px;
+  opacity: 0;
+}
+
+.proj__img__text {
+  background: #095f40;
+  color: white;
+  padding: 10px 20px;
+}
+
+.break__text {
+  text-decoration-color: #e7ecef;
+}
+.footer__section {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  flex-grow: 1;
+  background: #1d252c;
+}
+
+.social__media {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0px;
+}
+
+.social__icons > li {
+  padding: 20px;
+}
+
+.button__grow {
+  transition: all 0.1s ease-in-out;
+}
+
+.button__grow :hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .masthead__controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .skills {
+    flex-direction: row;
+  }
+  .work__images {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: 50%;
+  }
+  .social__icons > li {
+    padding: 5px;
+  }
+}
+@media (min-width: 1440px) {
+  .masthead__controls {
+    justify-content: space-around;
+  }
+}
