@@ -1,0 +1,56 @@
+body{
+  background: url("assets/images/aditya-vyas-542857-unsplash.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.intro-card{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  color: #F7F7F7;
+}
+
+h1{
+  font-weight: normal;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  border: 5px solid #644439;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 50px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon{
+  opacity: 0.6;
+  transition: opacity 1s ease-in-out;
+}
+
+.icon:hover{
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #011C27;
+  opacity: 0.5;
+  color: #C0C1CD;
+  text-align: center;
+}
